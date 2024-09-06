@@ -1,8 +1,8 @@
 const { google } = require('googleapis');
 const express = require('express');
 const router = express.Router();
-const { oAuth2Client } = require('./auth'); // Importar el cliente de autenticación
-
+ // Importar el cliente de autenticación
+const { oAuth2Client } = require('./auth'); // Importar el cliente de autenticación 
 // Ruta para crear un evento en Google Calendar
 router.post('/create-event', (req, res) => {
   const calendar = google.calendar({ version: 'v3', auth: oAuth2Client });
